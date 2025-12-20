@@ -3,15 +3,10 @@ import argparse
 import torch
 from torch.utils.data import DataLoader
 from torchvision.utils import save_image
-from PIL import Image
-import torchvision.transforms as transforms
-import kornia.morphology as morph
-
-import torch
 import gzip
 
 # Import the dataset and model classes from the training script
-from reversea_uie import paired_rgb_depth_dataset, ReverseaNet
+from reversea_uie import PairedRGBDepthDataset, ReverseaNet
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -50,15 +45,15 @@ def main(args):
     rs_model, rs_optimizer = load_checkpoint(checkpoint_path, rs_model, rs_optimizer)
 
     # Prepare the dataset and dataloader for inference
-    inference_dataset = paired_rgb_depth_dataset(
-    args.images, 
-    args.depth, 
-    args.depth_16u, 
-    args.mask_max_depth, 
-    args.height, 
-    args.width, 
-    device=device
-)
+    inference_dataset = PairedRGBDepthDataset(
+        args.images, 
+        args.depth, 
+        args.depth_16u, 
+        args.mask_max_depth, 
+        args.height, 
+        args.width, 
+        device=device
+    )
 
     dataloader = DataLoader(inference_dataset, batch_size=1, shuffle=False)
     

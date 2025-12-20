@@ -1,22 +1,7 @@
-import os
-import argparse
 import cv2
 import numpy as np
-import torch
-from time import time
-import torch.nn as nn
-import torchvision.transforms as transforms
-import kornia.morphology as morph
-from PIL import Image
-try:
-    from tqdm import trange
-except:
-    trange = range
 import math
 from scipy import ndimage
-import gzip
-import torch
-import pandas as pd
 
 def mu_a(x, alpha_L=0.1, alpha_R=0.1):
     """
@@ -274,20 +259,3 @@ def getUCIQE(img):
     uciqe = sigma_c*coe_Metric[0] + con_lum*coe_Metric[1] + avg_sat*coe_Metric[2]
     return uciqe
 
-def measure_UIQMs(dir_name, file_ext=None):
-    """
-      # measured in RGB
-      Assumes:
-        * dir_name contain generated images 
-        * to evaluate on all images: file_ext = None 
-        * to evaluate images that ends with "_SESR.png" or "_En.png"  
-            * use file_ext = "_SESR.png" or "_En.png" 
-    """
-    paths = sorted(glob(join(dir_name, "*.*")))
-    if file_ext:
-        paths = [p for p in paths if p.endswith(file_ext)]
-    uqims = []
-    for img_path in paths:
-        im = Image.open(img_path).resize((640,640))
-        uqims.append(getUIQM(np.array(im)))
-    return np.array(uqims)

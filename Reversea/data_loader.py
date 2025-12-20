@@ -8,7 +8,7 @@ import torch
 
 
 
-class paired_rgb_depth_dataset(Dataset):
+class PairedRGBDepthDataset(Dataset):
     def __init__(self, image_path, depth_path, openni_depth, mask_max_depth, image_height, image_width, device):
         self.raw_img_dir = image_path
         self.depth_dir = depth_path

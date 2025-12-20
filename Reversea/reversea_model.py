@@ -53,7 +53,7 @@ class ReverseaNet(nn.Module):
        
         # Final enhanced image
         J = (A+div)
-        return A1, A,J,direct, div
+        return A1, A, J, direct, div
     
     
 class ReverseaLoss(nn.Module):

@@ -1,18 +1,15 @@
 import os
 import argparse
-import cv2
 import numpy as np
 import torch
 from time import time
-import torch.nn as nn
 from torchvision.utils import save_image
 from PIL import Image
 import gzip
 import torch
 import pandas as pd
-from torch.utils.data import DataLoader, Dataset
-from data_loader import paired_rgb_depth_dataset
-from losses import histogram_equalization_loss,color_constancy_loss
+from torch.utils.data import DataLoader
+from data_loader import PairedRGBDepthDataset
 from scores import getUCIQE,getUIQM
 from reversea_model import ReverseaNet,ReverseaLoss
 try:
@@ -33,7 +30,7 @@ def main(args):
     torch.manual_seed(seed)
     torch.autograd.set_detect_anomaly(True)
 
-    train_dataset = paired_rgb_depth_dataset(args.images, args.depth, args.depth_16u, args.mask_max_depth, args.height,
+    train_dataset = PairedRGBDepthDataset(args.images, args.depth, args.depth_16u, args.mask_max_depth, args.height,
                                              args.width, args.device)
     save_dir = args.output
     os.makedirs(save_dir, exist_ok=True)
