@@ -8,6 +8,9 @@ ReverSea is a lightweight, depth-aware CNN for enhancing low-light underwater im
 - Lightweight CNN architecture  
 - Effective in deep-sea and low-light conditions  
 
+## Block Diagram
+![ReverSea Block Diagram](Reversea.png)
+
 ## Paper
 **ReverSea: A Depth-Aware CNN for Low-Light Underwater Image Enhancement** :
 https://ieeexplore.ieee.org/abstract/document/11104786
