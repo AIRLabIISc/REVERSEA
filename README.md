@@ -14,3 +14,15 @@ ReverSea is a lightweight, depth-aware CNN for enhancing low-light underwater im
 ## Paper
 **ReverSea: A Depth-Aware CNN for Low-Light Underwater Image Enhancement** :
 https://ieeexplore.ieee.org/abstract/document/11104786
+
+## Citation
+```bibtex
+@inproceedings{makam2025reversea,
+  title={ReverSea: An Enhancement Technique for Low-Lit Underwater Images},
+  author={Makam, Rajini and Shankari, Dhatri and Patil, Sharanya and Sundram, Suresh},
+  booktitle={OCEANS 2025 Brest},
+  pages={1--8},
+  year={2025},
+  organization={IEEE}
+}
+
