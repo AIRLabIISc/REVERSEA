@@ -68,5 +68,5 @@ class ReverseaLoss(nn.Module):
         channel_intensities = torch.mean(J, dim=[2, 3], keepdim=True)
         cc_loss = color_constancy_loss(J)
         channel_intensities = torch.mean(J, dim=[2, 3], keepdim=True)
-        int_loss = (channel_intensities - self.target_intensity).square().mean()
-        return ((0.25 *hist_loss)+(0.5*cc_loss)+(int_loss)) 
+        lum_loss = (channel_intensities - self.target_intensity).square().mean()
+        return ((0.25 *hist_loss)+(0.5*cc_loss)+(lum_loss)) 
