@@ -58,9 +58,9 @@ pip install -r req.txt
 ## Running
 
 The easiest way to run ReverSea is using the provided notebook:
-# train+inf.ipynb
+train+inf.ipynb
 
-## Paper
+## Checkout the Paper:
 **ReverSea: A Depth-Aware CNN for Low-Light Underwater Image Enhancement** :
 https://ieeexplore.ieee.org/abstract/document/11104786
 
