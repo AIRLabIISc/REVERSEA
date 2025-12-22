@@ -94,5 +94,3 @@ if __name__ == '__main__':
     args = parser.parse_args()
     main(args)
     
-
-# rs_model_state_dict - bs_model_state_dict
