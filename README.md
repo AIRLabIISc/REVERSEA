@@ -1,15 +1,64 @@
-# ReverSea
 
-ReverSea is a lightweight, depth-aware CNN for enhancing low-light underwater images. It directly processes raw images by incorporating transmission maps to restore natural colors, improve visibility, and handle non-uniform illumination.
+
+# ReverSea: A Depth-Aware CNN for Low-Light Underwater Image Enhancement ([Paper](https://ieeexplore.ieee.org/abstract/document/11104786))
+
+[![License](https://img.shields.io/badge/License-Research%20Only-informational.svg)](#license)
+[![Framework](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?&logo=PyTorch&logoColor=white)](https://pytorch.org/)
+[![Python](https://img.shields.io/badge/Python-3.12-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
+
+ReverSea is a lightweight, **depth-aware CNN** for enhancing **low-light underwater images**.  
+It directly processes raw images by incorporating **transmission maps** to restore natural colors, improve visibility, and handle non-uniform illumination.
+
+<div align="center">
+  <img src="Reversea.png" width="75%"/>
+</div>
 
 ## Highlights
-- No preprocessing required  
-- Depth-aware enhancement using transmission maps  
-- Lightweight CNN architecture  
-- Effective in deep-sea and low-light conditions  
+- **No preprocessing required**
+- **Depth-aware enhancement** using transmission maps
+- **Lightweight CNN** architecture
+- Effective in **deep-sea** and **low-light** conditions
 
-## Block Diagram
-![ReverSea Block Diagram](Reversea.png)
+---
+
+## Repository Structure (Quick Tour)
+- `train+inf.ipynb` : **Training + Inference** notebook (main entrypoint)
+- `weights/` : pretrained weights FOR SeeThru and OceanDark Datasets
+- `req.txt` : python dependencies
+
+---
+
+## Requirements
+- **Python 3.12** (recommended / tested)
+- Works best on **Linux + NVIDIA GPU** (CUDA) for training
+- Install dependencies from `req.txt`
+
+---
+
+## Setup & Installation
+
+### 1) Clone the repository
+```bash
+git clone https://github.com/AIRLabIISc/REVERSEA.git
+cd Reversea
+```
+
+### 2) Create and activate a virtual environment
+```bash
+python3.12 -m venv reversea
+source reversea/bin/activate
+```
+
+### 3) Install requirements
+```bash
+pip install --upgrade pip
+pip install -r req.txt
+```
+
+## Running
+
+The easiest way to run ReverSea is using the provided notebook:
+# train+inf.ipynb
 
 ## Paper
 **ReverSea: A Depth-Aware CNN for Low-Light Underwater Image Enhancement** :
@@ -25,4 +74,6 @@ https://ieeexplore.ieee.org/abstract/document/11104786
   year={2025},
   organization={IEEE}
 }
+
+
 
