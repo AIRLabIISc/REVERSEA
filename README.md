@@ -57,7 +57,7 @@ pip install -r req.txt
 
 ## Running
 
-The easiest way to run ReverSea is using the provided notebook:
+To run ReverSea use the provided notebook:
 train+inf.ipynb
 
 ## Checkout the Paper:
