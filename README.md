@@ -58,7 +58,7 @@ pip install -r req.txt
 To execute ReverSea Model use the provided notebook:
 train+inf.ipynb
 
-## Paper:
+## Paper
 **ReverSea: A Depth-Aware CNN for Low-Light Underwater Image Enhancement** :
 https://ieeexplore.ieee.org/abstract/document/11104786
 
