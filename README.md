@@ -14,7 +14,6 @@ It directly processes raw images by incorporating **transmission maps** to resto
 </div>
 
 ## Highlights
-- **No preprocessing required**
 - **Depth-aware enhancement** using transmission maps
 - **Lightweight CNN** architecture
 - Effective in **deep-sea** and **low-light** conditions
@@ -22,15 +21,14 @@ It directly processes raw images by incorporating **transmission maps** to resto
 ---
 
 ## Repository Structure (Quick Tour)
-- `train+inf.ipynb` : **Training + Inference** notebook (main entrypoint)
-- `weights/` : pretrained weights FOR SeeThru and OceanDark Datasets
+- `Reversea/train+inf.ipynb` : **Training + Inference** notebook (main entrypoint)
+- `Reversea/Weights/` : pretrained weights for SeeThru and OceanDark Datasets
 - `req.txt` : python dependencies
 
 ---
 
 ## Requirements
 - **Python 3.12** (recommended / tested)
-- Works best on **Linux + NVIDIA GPU** (CUDA) for training
 - Install dependencies from `req.txt`
 
 ---
@@ -55,12 +53,12 @@ pip install --upgrade pip
 pip install -r req.txt
 ```
 
-## Running
+## Usage
 
-To run ReverSea use the provided notebook:
+To execute ReverSea Model use the provided notebook:
 train+inf.ipynb
 
-## Checkout the Paper:
+## Paper:
 **ReverSea: A Depth-Aware CNN for Low-Light Underwater Image Enhancement** :
 https://ieeexplore.ieee.org/abstract/document/11104786
 
