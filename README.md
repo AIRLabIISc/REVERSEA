@@ -72,6 +72,3 @@ https://ieeexplore.ieee.org/abstract/document/11104786
   year={2025},
   organization={IEEE}
 }
-
-
-
